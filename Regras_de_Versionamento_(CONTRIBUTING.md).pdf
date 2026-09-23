@@ -1,0 +1,82 @@
+# 🤝 Acordo de Contribuição e Versionamento (CONTRIBUTING.m
+d)
+Este documento define as regras de versionamento que todo o
+código deste projeto deve seguir. O objetivo é simular um a
+mbiente real de desenvolvimento, garantindo segurança e org
+anização.
+### 1. A Regra de Ouro (Branch `main`)
+A branch `main` é sagrada. **Nenhum código deve ser commita
+do diretamente nela.**
+Ela deve conter apenas código testado, funcionando e que nã
+o quebre o servidor. Toda nova funcionalidade deve nascer e
+m uma branch separada.
+### 2. Nomenclatura de Branches
+O projeto utiliza uma estrutura modular (um arquivo de sche
+ma para cada entidade). As branches devem refletir exatamen
+te essa separação física.
+* `feature/nome-da-funcionalidade`: Para novas tabelas, rot
+as ou telas.
+* `fix/nome-do-bug`: Para correções de erros.
+**Exemplo de Fluxo Modular:**
+* `feature/schema-usuario` ➔ Criação do arquivo `schema/usu
+ario.js`.
+* `feature/schema-habito` ➔ Criação do arquivo `schema/habi
+to.js`.
+* `feature/schema-registro` ➔ Criação do arquivo `schema/re
+gistro.js`.
+### 3. Padrão de Commits
+
+
+
+As mensagens de commit devem ser curtas, diretas e usar ver
+bos no infinitivo, indicando a ação realizada.
+* ❌ *Ruim:* "atualizando banco", "arquivos novos", "mudanç
+as na aula 4"
+* ✅ *Bom:* "feat: criar entidade de usuarios e chave prima
+ria"
+* ✅ *Bom:* "fix: corrigir erro de importação no Drizzle"
+* ✅ *Bom:* "docs: adicionar documentacao de rotas no READM
+E"
+### 4. O Fluxo de PR Solitário (Passo a Passo)
+Como este é um projeto individual, você será o revisor do s
+eu próprio código através de Pull Requests (PRs).
+1. Crie a branch da entidade: `git checkout -b feature/sche
+ma-habito`
+2. Escreva o código no arquivo correspondente (ex: `schema/
+habito.js`).
+3. Adicione e commite: `git add .` e `git commit -m "feat:
+criar schema de habitos"`
+4. Suba a branch para o GitHub: `git push origin feature/sc
+hema-habito`
+5. No GitHub, abra um **Pull Request** dessa branch para a
+`main`.
+6. Revise as alterações e clique em **Merge pull request**.
+7. Volte ao terminal, retorne para a main (`git checkout ma
+in`), atualize o código (`git pull`) e inicie a próxima fea
+ture.
+
+
+O Recibo via Terminal
+O Git possui um comando nativo que desenha a árvore de commits, mostrando
+exatamente onde as branches nasceram e onde foram mergeadas.
+Ação do Aluno: No final da aula, antes de submeter a tarefa, o aluno roda
+no terminal:
+git log --graph --oneline --all > recibo-aula.txt
+Exemplo de Recibo Visual (Terminal)
+
+Regras de Versionamento (CONTRIBUTING.md) 2
+
+* e3b1a2c (HEAD -> main, origin/main) Merge pull request #3 from feature/schema-regi
+stro
+|\
+| * 7f4d2a1 (origin/feature/schema-registro) feat: criar entidade e relacionamentos em
+schema/registro.js
+|/
+* c8a9f4d Merge pull request #2 from feature/schema-habito
+|\
+| * b5c6e8a (origin/feature/schema-habito) feat: criar schema isolado em schema/habit
+o.js
+|/
+* a1b2c3d Merge pull request #1 from feature/schema-usuario
+|\
+| * f9e8d7c (origin/feature/schema-usuario) feat: configurar tabela de usuarios
