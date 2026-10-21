@@ -1,0 +1,3 @@
+* 03a89ce feat: progresso na pagina inicial e navbar
+* 2e8725f Inicio de algo
+* 0c44fba feat:setup inicial do projeto
