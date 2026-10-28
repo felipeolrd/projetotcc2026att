@@ -6,11 +6,8 @@ export const fisicaContents = {
     category: "Física",
     content: [
       "O Movimento Uniformemente Variado (MUV) acontece quando a velocidade de um corpo muda de maneira constante ao longo do tempo. Isso significa que ele possui aceleração constante e diferente de zero.",
-
       "Galileu Galilei suspeitou que um objeto em queda não mantinha a velocidade constante, mas aumentava sua velocidade regularmente. Para testar isso, ele usou um plano inclinado com uma canaleta, fazendo uma bola rolar pela rampa. A inclinação deixava o movimento mais lento e facilitava a medição do tempo.",
-
       "Galileu percebeu que, em intervalos de tempo iguais, a bola percorria distâncias cada vez maiores. Ele concluiu que a distância era proporcional ao quadrado do tempo: se o tempo dobrava, a distância percorrida ficava quatro vezes maior.",
-
       "Com esse experimento, Galileu mostrou que a queda livre é um movimento uniformemente acelerado. Assim surgiu a base do MUV, em que a velocidade varia igualmente a cada intervalo de tempo."
     ],
     formulas: [
@@ -31,6 +28,51 @@ export const fisicaContents = {
     ],
     formulas: [
       "F_R = m \\cdot a"
+    ]
+  },
+
+  "fis-3": {
+    title: "Termodinâmica",
+    subtitle: "Primeira Lei e Comportamento dos Gases",
+    category: "Física",
+    content: [
+      "A termodinâmica estuda as relações entre calor, trabalho e energia térmica em sistemas físicos. Ela descreve como a energia se transforma de uma forma para outra.",
+      "A Primeira Lei da Termodinâmica é essencialmente o princípio da conservação de energia aplicado aos sistemas térmicos. Ela diz que a variação da energia interna de um sistema é igual à quantidade de calor trocada com o ambiente menos o trabalho realizado pelo sistema.",
+      "O calor é a energia térmica em trânsito devido a uma diferença de temperatura, enquanto o trabalho está associado à expansão ou compressão de fluidos ou gases no interior de recipientes."
+    ],
+    formulas: [
+      "\\Delta U = Q - W",
+      "P \\cdot V = n \\cdot R \\cdot T"
+    ]
+  },
+
+  "fis-4": {
+    title: "Óptica Geométrica",
+    subtitle: "Reflexão da Luz e Espelhos Esféricos",
+    category: "Física",
+    content: [
+      "A óptica geométrica estuda o comportamento da luz através de raios luminosos, considerando fenômenos como a propagação retilínea, reflexão e refração.",
+      "Nos espelhos esféricos (côncavos ou convexos), a formação de imagens depende da posição do objeto em relação ao foco e ao centro de curvatura do espelho.",
+      "A equação de Gauss relaciona a distância focal do espelho com a distância do objeto e da imagem gerada, permitindo prever o comportamento óptico de sistemas refletores."
+    ],
+    formulas: [
+      "\\frac{1}{f} = \\frac{1}{p} + \\frac{1}{p'}",
+      "A = \\frac{i}{o} = -\\frac{p'}{p}"
+    ]
+  },
+
+  "fis-5": {
+    title: "Ondulatória",
+    subtitle: "Propagação de Ondas e Equação Fundamental",
+    category: "Física",
+    content: [
+      "Uma onda é uma perturbação que se propaga através do espaço transportando energia, mas sem transportar matéria. Elas podem ser classificadas como mecânicas (precisam de meio material) ou eletromagnéticas.",
+      "A equação fundamental da onda relaciona a velocidade de propagação com o comprimento de onda e a frequência. A frequência representa o número de oscilações por segundo, medida em Hertz.",
+      "Fenômenos ondulatórios importantes incluem a reflexão, refração, difração (capacidade de contornar obstáculos) e a interferência entre ondas."
+    ],
+    formulas: [
+      "v = \\lambda \\cdot f",
+      "T = \\frac{1}{f}"
     ]
   }
 };

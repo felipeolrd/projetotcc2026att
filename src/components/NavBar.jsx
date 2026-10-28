@@ -1,14 +1,16 @@
+// src/components/Navbar.jsx
 "use client";
 
 import React from 'react';
 import { Search, X, Menu, BookOpen } from 'lucide-react';
+import { SearchResults } from './SearchResults';
 
-export function Navbar({ isSidebarOpen, setIsSidebarOpen, searchQuery, setSearchQuery }) {
+export function Navbar({ isSidebarOpen, setIsSidebarOpen, searchQuery, setSearchQuery, onSelectTopic }) {
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/90 transition-colors duration-200">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         
-        {/* Esquerda: Botão Sanduíche + Logo Stem Docs */}
+        {/* Esquerda: Botão Sanduíche + Logo */}
         <div className="flex items-center gap-3">
           <button
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -28,13 +30,13 @@ export function Navbar({ isSidebarOpen, setIsSidebarOpen, searchQuery, setSearch
           </div>
         </div>
 
-        {/* Centro: Barra de Pesquisa Centralizada */}
-        <div className="flex-1 max-w-md mx-4 sm:mx-8">
+        {/* Centro: Barra de Pesquisa Modular */}
+        <div className="flex-1 max-w-md mx-4 sm:mx-8 relative">
           <div className="relative">
             <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
             <input
               type="text"
-              placeholder="Pesquisar tópicos na documentação..."
+              placeholder="Pesquisar tópicos, termos ou conteúdos..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full rounded-full border border-slate-200 bg-slate-50 py-2 pl-10 pr-10 text-sm text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20 dark:border-slate-800 dark:bg-slate-800 dark:text-white dark:placeholder-slate-500 dark:focus:border-blue-400 dark:focus:bg-slate-900 transition-all"
@@ -48,9 +50,16 @@ export function Navbar({ isSidebarOpen, setIsSidebarOpen, searchQuery, setSearch
               </button>
             )}
           </div>
+
+          {/* Componente Modular de Resultados */}
+          <SearchResults 
+            searchQuery={searchQuery} 
+            onSelectTopic={onSelectTopic} 
+            clearSearch={() => setSearchQuery('')} 
+          />
         </div>
 
-        {/* Espaço à direita para equilibrar a barra centralizada */}
+        {/* Espaço à direita para equilibrar */}
         <div className="hidden sm:block w-10"></div>
       </div>
     </nav>
